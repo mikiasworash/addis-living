@@ -1,9 +1,20 @@
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { cn } from "@/lib/utils";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
 
 const Home = () => {
   return (
-    <div className="h-screen">
-      <CardContainer className="inter-var">
+    <div className="py-32">
+      {/* <CardContainer className="inter-var">
         <CardBody className="relative group/card  hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-[#2A303C] border-white/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
           <CardItem translateZ="50" className="text-xl font-bold text-white">
             Make things float in air
@@ -39,8 +50,132 @@ const Home = () => {
             </CardItem>
           </div>
         </CardBody>
-      </CardContainer>
+      </CardContainer> */}
+
+      <BentoGrid className="max-w-6xl mx-auto">
+        {items.map((item, i) => (
+          <BentoGridItem
+            key={i}
+            title={item.title}
+            description={item.description}
+            header={item.header}
+            price={item.price}
+            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          />
+        ))}
+      </BentoGrid>
     </div>
   );
 };
 export default Home;
+
+const Skeleton = () => (
+  <div className="w-full h-full min-h-[6rem] rounded-xl">
+    <img
+      src="https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
+      className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+      alt="thumbnail"
+    />
+  </div>
+);
+const items = [
+  {
+    title: "The Dawn of Innovation",
+    description: "Explore the birth of groundbreaking ideas and inventions.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Digital Revolution",
+    description: "Dive into the transformative power of technology.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/white-concrete-building-g39p1kDjvSY"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Art of Design",
+    description: "Discover the beauty of thoughtful and functional design.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/trees-beside-white-house-IYfp2Ixe9nM"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Power of Communication",
+    description:
+      "Understand the impact of effective communication in our lives.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/brown-and-white-concrete-house-under-blue-sky-during-daytime-XGvwt544g8k"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Pursuit of Knowledge",
+    description: "Join the quest for understanding and enlightenment.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Joy of Creation",
+    description: "Experience the thrill of bringing ideas to life.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/white-and-brown-house-near-swimming-pool-ylyn5r4vxcA"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+  {
+    title: "The Spirit of Adventure",
+    description: "Embark on exciting journeys and thrilling discoveries.",
+    header: (
+      <div className="w-full h-full min-h-[6rem] rounded-xl">
+        <img
+          src="https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+          className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+          alt="thumbnail"
+        />
+      </div>
+    ),
+    price: "$10/night",
+  },
+];

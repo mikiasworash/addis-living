@@ -28,23 +28,23 @@ function Auth() {
               to="#"
               className="hover:underline underline-offset-4 me-4 md:me-6"
             >
+              Sell/Rent
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="#"
+              className="hover:underline underline-offset-4 me-4 md:me-6"
+            >
+              Buy
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="#"
+              className="hover:underline underline-offset-4 me-4 md:me-6"
+            >
               About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="hover:underline underline-offset-4 me-4 md:me-6"
-            >
-              Privacy
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="#"
-              className="hover:underline underline-offset-4 me-4 md:me-6"
-            >
-              Terms
             </Link>
           </li>
           <li>
