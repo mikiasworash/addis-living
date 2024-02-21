@@ -28,7 +28,7 @@ function Auth() {
               to="#"
               className="hover:underline underline-offset-4 me-4 md:me-6"
             >
-              Sell/Rent
+              List
             </Link>
           </li>
           <li>
@@ -36,7 +36,7 @@ function Auth() {
               to="#"
               className="hover:underline underline-offset-4 me-4 md:me-6"
             >
-              Buy
+              Buy/Rent
             </Link>
           </li>
           <li>
