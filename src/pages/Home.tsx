@@ -1,15 +1,15 @@
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+// import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { cn } from "@/lib/utils";
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
+// import { cn } from "@/lib/utils";
+// import {
+//   IconArrowWaveRightUp,
+//   IconBoxAlignRightFilled,
+//   IconBoxAlignTopLeft,
+//   IconClipboardCopy,
+//   IconFileBroken,
+//   IconSignature,
+//   IconTableColumn,
+// } from "@tabler/icons-react";
 
 const Home = () => {
   return (
@@ -69,15 +69,15 @@ const Home = () => {
 };
 export default Home;
 
-const Skeleton = () => (
-  <div className="w-full h-full min-h-[6rem] rounded-xl">
-    <img
-      src="https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
-      className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
-      alt="thumbnail"
-    />
-  </div>
-);
+// const Skeleton = () => (
+//   <div className="w-full h-full min-h-[6rem] rounded-xl">
+//     <img
+//       src="https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
+//       className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl"
+//       alt="thumbnail"
+//     />
+//   </div>
+// );
 const items = [
   {
     title: "The Dawn of Innovation",

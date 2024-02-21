@@ -12,7 +12,7 @@ import Auth from "./pages/Auth.tsx";
 import Profile from "./pages/Profile.tsx";
 import Register from "./pages/Register.tsx";
 import Login from "./pages/Login.tsx";
-import PrivateRoute from "./components/PrivateRoute.tsx";
+// import PrivateRoute from "./components/PrivateRoute.tsx";
 import "./index.css";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { dark } from "@clerk/themes";

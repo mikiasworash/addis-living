@@ -1,10 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 const Header = () => {
   return (
@@ -49,10 +44,7 @@ const Header = () => {
           </li>
           <li>
             <SignedIn>
-              <UserButton
-                afterSignOutUrl="/login"
-                className="hover:underline underline-offset-4"
-              />
+              <UserButton afterSignOutUrl="/login" />
             </SignedIn>
           </li>
           <li>
