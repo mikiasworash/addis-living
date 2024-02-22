@@ -16,7 +16,6 @@ import "./index.css";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { dark } from "@clerk/themes";
 
-// Import your publishable key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
@@ -48,7 +47,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       }}
       publishableKey={PUBLISHABLE_KEY}
     >
-      <RouterProvider router={router} />{" "}
+      <RouterProvider router={router} />
     </ClerkProvider>
   </React.StrictMode>
 );

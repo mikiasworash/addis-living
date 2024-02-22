@@ -44,7 +44,7 @@ const Header = () => {
           </li> */}
           <li>
             <SignedIn>
-              <UserButton afterSignOutUrl="/login" />
+              <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </li>
           <li>
