@@ -1,0 +1,60 @@
+{
+  "listings": [
+    {
+      "id": "1",
+      "title": "Modern Downtown Apartment",
+      "description": "Stunning Views, Central Location",
+      "type": "rent",
+      "price": "$100/night",
+      "image_source": "https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+    },
+    {
+      "id": "2",
+      "title": "Spacious Family Home",
+      "description": "Quiet Neighborhood, Large Garden",
+      "type": "sell",
+      "price": "$500,000",
+      "image_source": "https://source.unsplash.com/white-concrete-building-g39p1kDjvSY"
+    },
+    {
+      "id": "3",
+      "title": "Cozy Beachfront Cottage",
+      "description": "Steps Away from the Ocean",
+      "type": "rent",
+      "price": "$150/night",
+      "image_source": "https://source.unsplash.com/trees-beside-white-house-IYfp2Ixe9nM"
+    },
+    {
+      "id": "4",
+      "title": "Luxury Penthouse Suite",
+      "description": "Panoramic City Views",
+      "type": "sell",
+      "price": "$1,200,000",
+      "image_source": "https://source.unsplash.com/brown-and-white-concrete-house-under-blue-sky-during-daytime-XGvwt544g8k"
+    },
+    {
+      "id": "5",
+      "title": "Rustic Mountain Cabin",
+      "description": "Secluded Getaway, Fireplace",
+      "type": "rent",
+      "price": "$200/night",
+      "image_source": "https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
+    },
+    {
+      "id": "6",
+      "title": "Charming Suburban Bungalow",
+      "description": "Close to Parks and Schools",
+      "type": "sell",
+      "price": "$350,000",
+      "image_source": "https://source.unsplash.com/white-and-brown-house-near-swimming-pool-ylyn5r4vxcA"
+    },
+    {
+      "id": "7",
+      "title": "Sunny Coastal Villa",
+      "description": "Private Pool, Oceanfront",
+      "type": "rent",
+      "price": "$300/night",
+      "image_source": "https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+    }
+  ]
+}

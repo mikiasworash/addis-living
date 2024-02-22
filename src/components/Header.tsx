@@ -11,7 +11,7 @@ const Header = () => {
           </Link>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 md:mt-0">
-          <li>
+          {/* <li>
             <Link
               to="/"
               className="hover:underline underline-offset-4 me-4 md:me-6"
@@ -26,13 +26,13 @@ const Header = () => {
             >
               Offers
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link to="/profile" className="hover:underline underline-offset-4">
               Profile
             </Link>
           </li> */}
-          <li>
+          {/* <li>
             <SignedIn>
               <Link
                 to="/profile"
@@ -41,7 +41,7 @@ const Header = () => {
                 Profile
               </Link>
             </SignedIn>
-          </li>
+          </li> */}
           <li>
             <SignedIn>
               <UserButton afterSignOutUrl="/login" />
@@ -49,8 +49,21 @@ const Header = () => {
           </li>
           <li>
             <SignedOut>
-              <Link to="/login" className="hover:underline underline-offset-4">
+              <Link
+                to="/login"
+                className="hover:underline underline-offset-4 mr-4"
+              >
                 Sign In
+              </Link>
+            </SignedOut>
+          </li>
+          <li>
+            <SignedOut>
+              <Link
+                to="/register"
+                className="hover:underline underline-offset-4"
+              >
+                Sign Up
               </Link>
             </SignedOut>
           </li>

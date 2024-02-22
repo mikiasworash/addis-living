@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import App from "./App.tsx";
 import Home from "./pages/Home.tsx";
-import Auth from "./pages/Auth.tsx";
 import Profile from "./pages/Profile.tsx";
 import Register from "./pages/Register.tsx";
 import Login from "./pages/Login.tsx";
@@ -28,7 +27,6 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<Home />} />
-      <Route path="/auth" element={<Auth />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       {/* Private Routes */}
