@@ -11,6 +11,7 @@ import Home from "./pages/Home.tsx";
 import Profile from "./pages/Profile.tsx";
 import Register from "./pages/Register.tsx";
 import Login from "./pages/Login.tsx";
+import Listing from "./pages/Listing.tsx";
 // import PrivateRoute from "./components/PrivateRoute.tsx";
 import "./index.css";
 import { ClerkProvider } from "@clerk/clerk-react";
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route index={true} path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/listings/:id" element={<Listing />} />
       {/* Private Routes */}
       {/* <Route path="" element={<PrivateRoute />}>
         <Route path="/profile" element={<Profile />} />

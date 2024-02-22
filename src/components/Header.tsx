@@ -11,7 +11,7 @@ const Header = () => {
           </Link>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 md:mt-0">
-          {/* <li>
+          <li>
             <Link
               to="/"
               className="hover:underline underline-offset-4 me-4 md:me-6"
@@ -26,12 +26,7 @@ const Header = () => {
             >
               Offers
             </Link>
-          </li> */}
-          {/* <li>
-            <Link to="/profile" className="hover:underline underline-offset-4">
-              Profile
-            </Link>
-          </li> */}
+          </li>
           {/* <li>
             <SignedIn>
               <Link

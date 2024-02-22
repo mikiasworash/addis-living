@@ -1,6 +1,6 @@
 # Addis Living
 
-> To view the app live, Click 👉 [View Live](https://addis-living.vercel.app/)
+> 👉 [View Live](https://addis-living.vercel.app/)
 
 ## Introduction
 
@@ -13,7 +13,7 @@ Addis Living is a platform for finding and listing houses for rent and sale in A
 - **List Your Property**: Easily list your property for rent or sale on Addis Living to reach a large audience of potential buyers or tenants.
 - **User Accounts**: Create a user account to manage your listings, save favorites, and communicate with other users.
 
-## Installation
+## Running Locally
 
 ### 1. Clone the repository
 
@@ -41,12 +41,6 @@ VITE_CLERK_PUBLISHABLE_KEY=
 npm run dev
 ```
 
-### 5. Open [http://localhost:3000](http://localhost:3000) with your bowser
-
-## Contributing
-
-Contributions are welcome! If you have any ideas for new features, improvements, or bug fixes, please open an issue or submit a pull request.
-
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+Licensed under the [MIT License](https://opensource.org/licenses/MIT).
