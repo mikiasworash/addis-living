@@ -9,7 +9,7 @@ const Home = () => {
           <BentoGridItem
             key={i}
             title={item.title}
-            description={item.description}
+            description={item.subtitle}
             header={item.header}
             price={item.price}
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}

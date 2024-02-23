@@ -6,12 +6,15 @@ const Header = () => {
     <header className="fixed top-0 bg-[#191D24] w-full mx-auto z-50">
       <div className="max-w-fit md:max-w-screen-xl mx-auto p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-400 sm:text-center">
-          <Link to="/" className="text-white hover:text-gray-200 text-xl">
+          <Link
+            to="/"
+            className="text-gray-200 hover:text-gray-300 text-xl font-bold"
+          >
             Addis Living
           </Link>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-400 md:mt-0">
-          <li>
+          {/* <li>
             <Link
               to="/"
               className="hover:underline underline-offset-4 me-4 md:me-6"
@@ -26,7 +29,7 @@ const Header = () => {
             >
               Offers
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <SignedIn>
               <Link

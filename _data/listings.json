@@ -2,59 +2,203 @@
   "listings": [
     {
       "id": "1",
-      "title": "Modern Downtown Apartment",
-      "description": "Stunning Views, Central Location",
       "type": "rent",
+      "title": "Spacious Family Home",
+      "subtitle": "Quiet Neighborhood, CMC",
+      "description": "Beautifully designed home in a quiet neighborhood, perfect for families. Close to schools and parks. Open floor plan with modern kitchen and spacious living areas. Large backyard with a deck for entertaining.",
+      "features": [
+        "Spacious Backyard",
+        "Master Suite",
+        "Modern Kitchen",
+        "High Ceilings"
+      ],
+      "featureDescriptions": [
+        "Perfect for kids to play and for hosting outdoor get-togethers.",
+        "Sleek design with stainless steel appliances and ample storage",
+        "Spacious and comfortable with a walk-in closet and en-suite bathroom.",
+        "The living and dining areas flow seamlessly, creating a bright and welcoming space."
+      ],
+      "bedrooms": "4",
+      "bathrooms": "5",
+      "area": "1500 sqm",
+      "location": "CMC, Addis Ababa",
       "price": "$100/night",
-      "image_source": "https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+      "image_source": [
+        "https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4",
+        "https://source.unsplash.com/gray-steel-3-door-refrigerator-near-modular-kitchen-MP0bgaS_d1c",
+        "https://source.unsplash.com/brown-and-white-wooden-table-beside-sofa-chair-FBXuXp57eM0",
+        "https://source.unsplash.com/a-bedroom-with-a-bed-and-a-hanging-monkey-CxXB-TFNZ28"
+      ]
     },
     {
       "id": "2",
-      "title": "Spacious Family Home",
-      "description": "Quiet Neighborhood, Large Garden",
-      "type": "sell",
-      "price": "$500,000",
-      "image_source": "https://source.unsplash.com/white-concrete-building-g39p1kDjvSY"
+      "type": "rent",
+      "title": "Cozy Cottage Retreat",
+      "subtitle": "Tranquil Countryside, Harar",
+      "description": "Escape to this cozy cottage nestled in the tranquil countryside. Perfect for a weekend getaway. Enjoy the serene surroundings and explore nature trails nearby. Ideal for couples or solo travelers.",
+      "features": ["Scenic Views", "Fireplace", "Garden", "Wooden Interior"],
+      "featureDescriptions": [
+        "Enjoy breathtaking views of the surrounding landscape.",
+        "Stay warm and cozy on chilly evenings.",
+        "Surrounded by lush greenery, perfect for gardening enthusiasts.",
+        "Warm and inviting atmosphere with wooden accents throughout."
+      ],
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "area": "100 sqm",
+      "location": "Harar, Ethiopia",
+      "price": "$80/night",
+      "image_source": [
+        "https://source.unsplash.com/brown-and-white-concrete-house-under-blue-sky-during-daytime-XGvwt544g8k",
+        "https://source.unsplash.com/a-living-room-filled-with-furniture-and-a-pink-rug-C4EhHUxP9Fk",
+        "https://source.unsplash.com/living-room-with-brown-sofa-and-glass-window-4_jQL4JCS98",
+        "https://source.unsplash.com/green-plant-on-white-ceramic-pot-IH7wPsjwomc"
+      ]
     },
     {
       "id": "3",
-      "title": "Cozy Beachfront Cottage",
-      "description": "Steps Away from the Ocean",
-      "type": "rent",
-      "price": "$150/night",
-      "image_source": "https://source.unsplash.com/trees-beside-white-house-IYfp2Ixe9nM"
+      "type": "sale",
+      "title": "Modern Urban Villa",
+      "subtitle": "Downtown Convenience, Bole",
+      "description": "Sleek and stylish urban villa in the heart of the city. Conveniently located near shopping centers and entertainment venues. Industrial chic design with high ceilings and exposed brick walls.",
+      "features": [
+        "City Views",
+        "Villa Style",
+        "Fitness Center",
+        "Smart Home Technology"
+      ],
+      "featureDescriptions": [
+        "Enjoy stunning views of the city skyline.",
+        "Modern and trendy loft-style living space.",
+        "Stay fit and active with onsite fitness facilities.",
+        "Experience the convenience of smart home technology."
+      ],
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "area": "80 sqm",
+      "location": "Bole, Addis Ababa",
+      "price": "$250,000",
+      "image_source": [
+        "https://source.unsplash.com/white-and-brown-house-near-swimming-pool-ylyn5r4vxcA",
+        "https://source.unsplash.com/living-room-with-brown-wooden-table-and-chairs-YqFz7UMm8qE",
+        "https://source.unsplash.com/living-room-L7EwHkq1B2s",
+        "https://source.unsplash.com/a-living-room-with-wooden-floors-and-a-staircase--9UGJq5lkuw"
+      ]
     },
     {
       "id": "4",
-      "title": "Luxury Penthouse Suite",
-      "description": "Panoramic City Views",
-      "type": "sell",
-      "price": "$1,200,000",
-      "image_source": "https://source.unsplash.com/brown-and-white-concrete-house-under-blue-sky-during-daytime-XGvwt544g8k"
+      "type": "rent",
+      "title": "Seaside Villa Escape",
+      "subtitle": "Oceanfront Luxury, Addis Ababa",
+      "description": "Indulge in luxury at this stunning oceanfront villa. Breathtaking views of the sea and private beach access. Elegant design with spacious living areas and deluxe amenities. Perfect for a luxurious retreat.",
+      "features": [
+        "Private Pool",
+        "Beach Access",
+        "Gourmet Kitchen",
+        "Sun Deck"
+      ],
+      "featureDescriptions": [
+        "Relax and unwind in your own private pool.",
+        "Direct access to a pristine sandy beach.",
+        "Cook like a gourmet chef in the fully equipped kitchen.",
+        "Soak up the sun and enjoy stunning ocean views from the sun deck."
+      ],
+      "bedrooms": "6",
+      "bathrooms": "7",
+      "area": "500 sqm",
+      "location": "Addis Ababa",
+      "price": "$500/night",
+      "image_source": [
+        "https://source.unsplash.com/white-concrete-building-g39p1kDjvSY",
+        "https://source.unsplash.com/black-wooden-table-and-chairs-wDDfbanbhl8",
+        "https://source.unsplash.com/white-mattress-beside-sectional-sofa-emqnSQwQQDo",
+        "https://source.unsplash.com/a-view-of-a-body-of-water-from-a-window-IBtL0z2j1Oc"
+      ]
     },
     {
       "id": "5",
-      "title": "Rustic Mountain Cabin",
-      "description": "Secluded Getaway, Fireplace",
-      "type": "rent",
-      "price": "$200/night",
-      "image_source": "https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E"
+      "type": "sale",
+      "title": "Historic Townhouse Charm",
+      "subtitle": "Old Town Heritage, Harar",
+      "description": "Step back in time at this historic townhouse in the heart of Harar's old town. Preserving its original charm with modern updates. Exquisite architecture with intricate details and a tranquil courtyard.",
+      "features": [
+        "Historic Architecture",
+        "Courtyard",
+        "Original Details",
+        "Balcony"
+      ],
+      "featureDescriptions": [
+        "Experience the rich history and architectural heritage.",
+        "A peaceful oasis in the heart of the city.",
+        "Charming original features add character and charm.",
+        "Relax and enjoy the view from your own private balcony."
+      ],
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "area": "200 sqm",
+      "location": "Harar, Ethiopia",
+      "price": "$180,000",
+      "image_source": [
+        "https://source.unsplash.com/brown-and-black-wooden-house-TiVPTYCG_3E",
+        "https://source.unsplash.com/a-kitchen-with-a-stove-sink-cabinets-and-a-table-nPgg3xLxavs",
+        "https://source.unsplash.com/black-and-brown-wooden-table-with-chairs-h2_3dL9yLpU",
+        "https://source.unsplash.com/brown-staircase-UV81E0oXXWQ"
+      ]
     },
     {
       "id": "6",
-      "title": "Charming Suburban Bungalow",
-      "description": "Close to Parks and Schools",
-      "type": "sell",
-      "price": "$350,000",
-      "image_source": "https://source.unsplash.com/white-and-brown-house-near-swimming-pool-ylyn5r4vxcA"
+      "type": "rent",
+      "title": "Mountain Chalet Getaway",
+      "subtitle": "Alpine Retreat, Semien Mountains",
+      "description": "Escape to this charming mountain chalet nestled in the Semien Mountains. Spectacular views of the surrounding peaks and lush forests. Cozy interior with a fireplace and rustic decor.",
+      "features": ["Mountain Views", "Fireplace", "Hiking Trails", "Jacuzzi"],
+      "featureDescriptions": [
+        "Breathtaking panoramic views of the majestic mountains.",
+        "Stay warm and cozy on chilly mountain nights.",
+        "Explore scenic hiking trails right outside your doorstep.",
+        "Relax and unwind in the luxurious jacuzzi after a day of adventure."
+      ],
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "area": "150 sqm",
+      "location": "Semien Mountains, Ethiopia",
+      "price": "$120/night",
+      "image_source": [
+        "https://source.unsplash.com/trees-beside-white-house-IYfp2Ixe9nM",
+        "https://source.unsplash.com/brown-wooden-table-with-chairs-YI2YkyaREHk",
+        "https://source.unsplash.com/a-living-room-filled-with-furniture-and-a-fire-place-YKLGd9x3Gw8",
+        "https://source.unsplash.com/white-and-silver-pendant-lamp-yo5hCvbFUJI"
+      ]
     },
     {
       "id": "7",
-      "title": "Sunny Coastal Villa",
-      "description": "Private Pool, Oceanfront",
-      "type": "rent",
-      "price": "$300/night",
-      "image_source": "https://source.unsplash.com/3d-render-house-balcony-terrace-at-night-zzZJkvrzfP4"
+      "type": "sale",
+      "title": "Luxury Penthouse",
+      "subtitle": "Skyline Elegance, Kazanchis",
+      "description": "Experience luxury living at its finest in this exquisite penthouse apartment. Commanding views of the city skyline. High-end finishes and state-of-the-art amenities. Ideal for discerning buyers.",
+      "features": [
+        "Panoramic Views",
+        "High-end Finishes",
+        "Private Terrace",
+        "Concierge Service"
+      ],
+      "featureDescriptions": [
+        "Enjoy stunning panoramic views of the city from every angle.",
+        "Luxurious finishes and attention to detail throughout.",
+        "Relax and entertain on your own private terrace.",
+        "Experience personalized service with 24/7 concierge assistance."
+      ],
+      "bedrooms": "4",
+      "bathrooms": "4",
+      "area": "300 sqm",
+      "location": "Kazanchis, Addis Ababa",
+      "price": "$1,000,000",
+      "image_source": [
+        "https://source.unsplash.com/inside-condominium-unit-cHjAxnJk_wQ",
+        "https://source.unsplash.com/modern-house-interior-design-3d-rendering-project-GEv0x00erqU",
+        "https://source.unsplash.com/an-interior-of-modern-room-in-luxury-hotel-s4yfYIz964U",
+        "https://source.unsplash.com/white-bed-linen-on-bed-OI7YdFNSRQI"
+      ]
     }
   ]
 }

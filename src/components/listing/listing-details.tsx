@@ -13,77 +13,116 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { SVGProps } from "react";
+import { SVGProps, useEffect, useState } from "react";
 import { JSX } from "react/jsx-runtime";
+import { useNavigate, useParams } from "react-router-dom";
+import listingsData from "../../../_data/listings.json";
+
+interface Listing {
+  id: string;
+  type: "rent" | "sale";
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  featureDescriptions: string[];
+  bedrooms: string;
+  bathrooms: string;
+  area: string;
+  location: string;
+  price: string;
+  image_source: string[];
+}
 
 export function ListingDetails() {
+  const [loading, setLoading] = useState(true);
+  const [listing, setListing] = useState<Listing | null>(null);
+  const navigate = useNavigate();
+  const params = useParams();
+
+  useEffect(() => {
+    const item = listingsData.listings.find((item) => item.id === params.id);
+    setListing(item as Listing);
+    setLoading(false);
+  }, [params.id, navigate]);
+
+  if (loading)
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        <h1 className="text-white">Loading...</h1>
+      </div>
+    );
+
   return (
     <>
-      <div className="bg-gray-50 py-24">
+      <div className="bg-gray-50 py-32 lg:py-24">
         <div className="md:max-w-screen-xl mx-auto px-4 md:px-6 flex justify-center">
-          <div className="grid items-start gap-6 lg:grid-cols-3 lg:gap-12">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 items-center">
             <div className="grid gap-4 col-span-1">
               <div className="space-y-2">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Modern Family Home
+                  {listing?.title}
                 </h1>
                 <div className="flex items-center gap-2">
                   <LocateIcon className="w-4 h-4 flex-shrink-0" />
                   <span className="text-sm text-gray-500 dark:text-gray-400">
-                    Miami, FL
+                    {listing?.location}
                   </span>
                 </div>
-                <h2 className="text-2xl font-bold">$1,200,000</h2>
+                <h2 className="text-2xl font-bold">{listing?.price}</h2>
               </div>
               <div className="grid gap-2">
                 <p className="text-sm text-gray-500 md:text-base/relaxed lg:text-sm/relaxed xl:text-base/relaxed dark:text-gray-400">
-                  Beautifully designed home in a quiet neighborhood, perfect for
-                  families. Close to schools and parks. Open floor plan with
-                  modern kitchen and spacious living areas. Large backyard with
-                  a deck for entertaining.
+                  {listing?.description}
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="flex items-center gap-2">
                   <BedIcon className="w-4 h-4 flex-shrink-0" />
-                  <span className="font-medium">3 Beds</span>
+                  <span className="font-medium">{listing?.bedrooms} Beds</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <BathIcon className="w-4 h-4 flex-shrink-0" />
-                  <span className="font-medium">2 Baths</span>
+                  <span className="font-medium">
+                    {listing?.bathrooms} Baths
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <AreaChartIcon className="w-4 h-4 flex-shrink-0" />
-                  <span className="font-medium">1,800 sqft</span>
+                  <span className="font-medium">{listing?.area}</span>
                 </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-semibold">Spacious Backyard</h3>
+                  <h3 className="text-lg font-semibold">
+                    {listing?.features[0]}
+                  </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Perfect for kids to play and for hosting outdoor
-                    get-togethers.
+                    {listing?.featureDescriptions[0]}
                   </p>
                 </div>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-semibold">Modern Kitchen</h3>
+                  <h3 className="text-lg font-semibold">
+                    {listing?.features[1]}
+                  </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Sleek design with stainless steel appliances and ample
-                    storage.
+                    {listing?.featureDescriptions[1]}
                   </p>
                 </div>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-semibold">Master Suite</h3>
+                  <h3 className="text-lg font-semibold">
+                    {listing?.features[2]}
+                  </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Spacious and comfortable with a walk-in closet and en-suite
-                    bathroom.
+                    {listing?.featureDescriptions[2]}
                   </p>
                 </div>
                 <div className="grid gap-1">
-                  <h3 className="text-lg font-semibold">Open Floor Plan</h3>
+                  <h3 className="text-lg font-semibold">
+                    {listing?.features[3]}
+                  </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    The living and dining areas flow seamlessly, creating a
-                    bright and welcoming space.
+                    {listing?.featureDescriptions[3]}
                   </p>
                 </div>
               </div>
@@ -96,111 +135,17 @@ export function ListingDetails() {
                 </Button>
               </div>
             </div>
-            <div className="grid gap-4 col-span-2 lg:justify-center">
-              <img
-                alt="House"
-                className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
-                height="500"
-                src="/placeholder.svg"
-                width="700"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid items-start gap-6 lg:grid-cols-3 lg:gap-12">
-            <div className="grid gap-4 col-span-1">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold text-white tracking-tighter sm:text-5xl">
-                  Description
-                </h2>
-                <p className="text-gray-300 dark:text-gray-400">
-                  Beautifully designed home in a quiet neighborhood, perfect for
-                  families. Close to schools and parks. Open floor plan with
-                  modern kitchen and spacious living areas. Large backyard with
-                  a deck for entertaining.
-                </p>
-              </div>
-            </div>
-            <div className="grid gap-4 col-span-2 lg:justify-center">
-              <div className="grid gap-4">
-                <img
-                  alt="House"
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
-                  height="500"
-                  src="/placeholder.svg"
-                  width="700"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className="bg-gray-50 py-24">
-        <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
-          <div className="container px-4 md:px-6">
-            <div className="grid items-start gap-6 lg:grid-cols-3 lg:gap-12">
-              <div className="grid gap-4 col-span-1">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    Features
-                  </h2>
-                  <ul className="grid gap-2 py-4">
-                    <li>
-                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
-                      Spacious Backyard
-                    </li>
-                    <li>
-                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
-                      Modern Kitchen
-                    </li>
-                    <li>
-                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
-                      Master Suite
-                    </li>
-                    <li>
-                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
-                      Open Floor Plan
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="grid gap-4 col-span-2 lg:justify-center">
-                <img
-                  alt="House"
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
-                  height="500"
-                  src="/placeholder.svg"
-                  width="700"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
-        <div className="container px-4 md:px-6">
-          <div className="grid items-start gap-6 lg:grid-cols-3 lg:gap-12">
-            <div className="grid gap-4 col-span-1">
-              <div className="space-y-2">
-                <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-5xl">
-                  Photo Gallery
-                </h2>
-              </div>
-            </div>
-            <div className="grid gap-4 col-span-2 lg:justify-center">
+            <div className="grid gap-4 col-span-2 lg:justify-center px-6">
               <Carousel className="w-full p-1">
                 <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
+                  {Array.from({ length: 4 }).map((_, index) => (
                     <CarouselItem key={index}>
                       <img
-                        alt="House"
-                        className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
+                        alt="listing img"
+                        className="aspect-video w-full overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0 mx-auto"
                         height="500"
-                        src="/placeholder.svg"
-                        width="700"
+                        // src="/placeholder.svg"
+                        src={listing?.image_source[index]}
                       />
                     </CarouselItem>
                   ))}
@@ -211,10 +156,79 @@ export function ListingDetails() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
         <div className="container px-4 md:px-6">
-          <div className="grid items-start gap-6 lg:grid-cols-3 lg:gap-12">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 items-center">
+            <div className="grid gap-4 col-span-1">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold text-white tracking-tighter sm:text-5xl">
+                  Description
+                </h2>
+                <p className="text-gray-300 dark:text-gray-400">
+                  {listing?.description}
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-4 col-span-2 lg:justify-center">
+              <div className="grid gap-4">
+                <img
+                  alt="House"
+                  className="aspect-video overflow-hidden rounded-xl object-cover object-center shrink-0"
+                  height="500"
+                  src={listing?.image_source[1]}
+                  width="700"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="bg-gray-50 py-24">
+        <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 items-center">
+              <div className="grid gap-4 col-span-1">
+                <div className="space-y-2">
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    Features
+                  </h2>
+                  <ul className="grid gap-2 py-4">
+                    <li>
+                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
+                      {listing?.features[0]}
+                    </li>
+                    <li>
+                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
+                      {listing?.features[1]}
+                    </li>
+                    <li>
+                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
+                      {listing?.features[2]}
+                    </li>
+                    <li>
+                      <CheckIcon className="mr-2 inline-block h-4 w-4" />
+                      {listing?.features[3]}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="grid gap-4 col-span-2 lg:justify-center">
+                <img
+                  alt="House"
+                  className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
+                  height="500"
+                  src={listing?.image_source[2]}
+                  width="700"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section className="md:max-w-screen-xl mx-auto px-4 md:px-6 py-12 lg:py-24">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-6 lg:grid-cols-3 lg:gap-12 items-center">
             <div className="grid gap-4 col-span-1">
               <div className="space-y-2">
                 <h2 className="text-3xl text-white font-bold tracking-tighter sm:text-5xl">

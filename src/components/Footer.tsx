@@ -36,7 +36,7 @@ function Auth() {
               to="#"
               className="hover:underline underline-offset-4 me-4 md:me-6"
             >
-              Buy/Rent
+              Terms
             </Link>
           </li>
           <li>
