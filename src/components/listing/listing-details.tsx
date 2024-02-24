@@ -17,6 +17,7 @@ import { SVGProps, useEffect, useState } from "react";
 import { JSX } from "react/jsx-runtime";
 import { useNavigate, useParams } from "react-router-dom";
 import listingsData from "../../../_data/listings.json";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 interface Listing {
   id: string;
@@ -32,6 +33,10 @@ interface Listing {
   location: string;
   price: string;
   image_source: string[];
+  geolocation: {
+    lat: number;
+    lng: number;
+  };
 }
 
 export function ListingDetails() {
@@ -127,10 +132,22 @@ export function ListingDetails() {
                 </div>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
-                <Button size="lg" variant="outline">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => {
+                    window.scrollTo(0, document.body.scrollHeight);
+                  }}
+                >
                   Schedule a Tour
                 </Button>
-                <Button size="lg" variant="outline">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  onClick={() => {
+                    window.scrollTo(0, document.body.scrollHeight);
+                  }}
+                >
                   Make an Offer
                 </Button>
               </div>
@@ -271,15 +288,31 @@ export function ListingDetails() {
                 </div>
               </form>
             </div>
-            <div className="grid gap-4 col-span-2 lg:justify-center my-auto">
-              <div className="grid gap-4">
-                <img
-                  alt="Agent"
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center border border-gray-100 shrink-0"
-                  height="500"
-                  src="/placeholder.svg"
-                  width="700"
-                />
+            <div className="col-span-2 lg:justify-center my-auto">
+              <div className="w-full h-96 overflow-hidden">
+                <MapContainer
+                  style={{ height: "100%", width: "100%" }}
+                  center={[
+                    listing?.geolocation.lat as number,
+                    listing?.geolocation.lng as number,
+                  ]}
+                  zoom={13}
+                  scrollWheelZoom={false}
+                >
+                  <TileLayer
+                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
+                  />
+
+                  <Marker
+                    position={[
+                      listing?.geolocation.lat as number,
+                      listing?.geolocation.lng as number,
+                    ]}
+                  >
+                    <Popup>{listing?.location}</Popup>
+                  </Marker>
+                </MapContainer>
               </div>
             </div>
           </div>

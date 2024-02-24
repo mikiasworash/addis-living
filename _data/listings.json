@@ -28,7 +28,11 @@
         "https://source.unsplash.com/gray-steel-3-door-refrigerator-near-modular-kitchen-MP0bgaS_d1c",
         "https://source.unsplash.com/brown-and-white-wooden-table-beside-sofa-chair-FBXuXp57eM0",
         "https://source.unsplash.com/a-bedroom-with-a-bed-and-a-hanging-monkey-CxXB-TFNZ28"
-      ]
+      ],
+      "geolocation": {
+        "lat": 9.0358,
+        "lng": 38.7811
+      }
     },
     {
       "id": "2",
@@ -53,7 +57,11 @@
         "https://source.unsplash.com/a-living-room-filled-with-furniture-and-a-pink-rug-C4EhHUxP9Fk",
         "https://source.unsplash.com/living-room-with-brown-sofa-and-glass-window-4_jQL4JCS98",
         "https://source.unsplash.com/green-plant-on-white-ceramic-pot-IH7wPsjwomc"
-      ]
+      ],
+      "geolocation": {
+        "lat": 9.312763759704392,
+        "lng": 42.120637613366334
+      }
     },
     {
       "id": "3",
@@ -83,7 +91,11 @@
         "https://source.unsplash.com/living-room-with-brown-wooden-table-and-chairs-YqFz7UMm8qE",
         "https://source.unsplash.com/living-room-L7EwHkq1B2s",
         "https://source.unsplash.com/a-living-room-with-wooden-floors-and-a-staircase--9UGJq5lkuw"
-      ]
+      ],
+      "geolocation": {
+        "lat": 8.988915978893422,
+        "lng": 38.785279615728555
+      }
     },
     {
       "id": "4",
@@ -113,7 +125,11 @@
         "https://source.unsplash.com/black-wooden-table-and-chairs-wDDfbanbhl8",
         "https://source.unsplash.com/white-mattress-beside-sectional-sofa-emqnSQwQQDo",
         "https://source.unsplash.com/a-view-of-a-body-of-water-from-a-window-IBtL0z2j1Oc"
-      ]
+      ],
+      "geolocation": {
+        "lat": 8.988915978893422,
+        "lng": 38.785279615728555
+      }
     },
     {
       "id": "5",
@@ -143,7 +159,11 @@
         "https://source.unsplash.com/a-kitchen-with-a-stove-sink-cabinets-and-a-table-nPgg3xLxavs",
         "https://source.unsplash.com/black-and-brown-wooden-table-with-chairs-h2_3dL9yLpU",
         "https://source.unsplash.com/brown-staircase-UV81E0oXXWQ"
-      ]
+      ],
+      "geolocation": {
+        "lat": 9.312763759704392,
+        "lng": 42.120637613366334
+      }
     },
     {
       "id": "6",
@@ -168,7 +188,11 @@
         "https://source.unsplash.com/brown-wooden-table-with-chairs-YI2YkyaREHk",
         "https://source.unsplash.com/a-living-room-filled-with-furniture-and-a-fire-place-YKLGd9x3Gw8",
         "https://source.unsplash.com/white-and-silver-pendant-lamp-yo5hCvbFUJI"
-      ]
+      ],
+      "geolocation": {
+        "lat": 13.299001995029592,
+        "lng": 38.28764226217299
+      }
     },
     {
       "id": "7",
@@ -198,7 +222,11 @@
         "https://source.unsplash.com/modern-house-interior-design-3d-rendering-project-GEv0x00erqU",
         "https://source.unsplash.com/an-interior-of-modern-room-in-luxury-hotel-s4yfYIz964U",
         "https://source.unsplash.com/white-bed-linen-on-bed-OI7YdFNSRQI"
-      ]
+      ],
+      "geolocation": {
+        "lat": 9.008106348406054,
+        "lng": 38.77356976924924
+      }
     }
   ]
 }
